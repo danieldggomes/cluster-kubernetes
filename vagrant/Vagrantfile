@@ -1,0 +1,32 @@
+Vagrant.configure("2") do |config|
+    config.vm.define "mrRobot01" do |mrRobot01|
+        mrRobot01.vm.box = "generic/ubuntu1604"
+        mrRobot01.vm.hostname = "mrRobot01"
+        mrRobot01.vm.provision "shell", inline: "hostname"
+        mrRobot01.vm.provider "libvirt" do |lv|
+            lv.driver = "kvm"
+            lv.cpus = 2
+            lv.memory = 4096
+        end
+    end
+    config.vm.define "mrRobot02" do |mrRobot02|
+        mrRobot02.vm.box = "generic/ubuntu1604"
+        mrRobot02.vm.hostname = "mrRobot02"
+        mrRobot02.vm.provision "shell", inline: "hostname"
+        mrRobot02.vm.provider "libvirt" do |lv|
+            lv.driver = "kvm"
+            lv.cpus = 2
+            lv.memory = 4096
+        end
+    end
+    config.vm.define "mrRobot03" do |mrRobot03|
+        mrRobot03.vm.box = "generic/ubuntu1604"
+        mrRobot03.vm.hostname = "mrRobot03"
+        mrRobot03.vm.provision "shell", inline: "hostname"
+        mrRobot03.vm.provider "libvirt" do |lv|
+            lv.driver = "kvm"
+            lv.cpus = 2
+            lv.memory = 4096
+        end
+    end        
+end
