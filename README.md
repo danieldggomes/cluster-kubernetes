@@ -106,6 +106,17 @@ kubeadm join 192.168.121.95:6443 --token uba0e6.25j0y3cx9wcm2gde \
 ```
 
 
+# Configurando o "Completaion Kubectl" para facilitar o uso
+
+apt-get install bash-completion
+
+source /usr/share/bash-completion/bash_completion
+
+# Utilizando
+
+
+
+
 # Vagrant Cloud
 
 vagrant cloud auth login
